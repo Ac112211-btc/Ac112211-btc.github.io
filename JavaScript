@@ -1,0 +1,200 @@
+// ==========================
+// 御颜阁网站 JavaScript
+// ==========================
+
+
+
+// ==========================
+// 1. Banner自动轮播
+// ==========================
+
+
+const banners = [
+
+    "images/banner1.jpg",
+
+    "images/banner2.jpg",
+
+    "images/banner3.jpg"
+
+];
+
+
+let current = 0;
+
+
+const bannerImg = document.getElementById("banner");
+
+
+
+setInterval(function(){
+
+
+    current++;
+
+
+    if(current >= banners.length){
+
+        current = 0;
+
+    }
+
+
+    bannerImg.src = banners[current];
+
+
+},4000);
+
+
+
+
+
+
+
+// ==========================
+// 2. 获取预约弹窗元素
+// ==========================
+
+
+const modal = document.getElementById("bookingModal");
+
+
+const openModalBtn = document.getElementById("openModal");
+
+
+const bookBtn = document.getElementById("bookBtn");
+
+
+const closeModalBtn = document.getElementById("closeModal");
+
+
+const chatBtn = document.getElementById("chatBtn");
+
+
+
+
+
+
+// ==========================
+// 3. 打开预约弹窗
+// ==========================
+
+
+
+function openBooking(){
+
+
+    modal.style.display = "flex";
+
+
+}
+
+
+
+
+openModalBtn.onclick = openBooking;
+
+
+bookBtn.onclick = openBooking;
+
+
+
+
+
+
+
+// ==========================
+// 4. 关闭预约弹窗
+// ==========================
+
+
+
+function closeBooking(){
+
+
+    modal.style.display = "none";
+
+
+}
+
+
+
+
+closeModalBtn.onclick = closeBooking;
+
+
+
+
+
+
+// 点击黑色背景关闭
+
+
+window.onclick = function(event){
+
+
+    if(event.target === modal){
+
+
+        closeBooking();
+
+
+    }
+
+
+};
+
+
+
+
+
+
+
+// ==========================
+// 5. 在线咨询
+// ==========================
+
+
+
+chatBtn.onclick=function(){
+
+
+    alert(
+
+    "客服正在为您服务，请稍后..."
+
+    );
+
+
+};
+
+
+
+
+
+
+
+// ==========================
+// 6. 提交预约
+// ==========================
+
+
+
+const submitBtn = document.querySelector(".submit-btn");
+
+
+
+submitBtn.onclick=function(){
+
+
+    alert(
+
+    "预约提交成功！御颜阁客服会尽快联系您。"
+
+    );
+
+
+    closeBooking();
+
+
+};

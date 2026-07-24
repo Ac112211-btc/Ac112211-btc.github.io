@@ -1,275 +1,785 @@
-/* 整个网页 */
+/* =====================
+   全局基础设置
+===================== */
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
 body{
-    max-width:900px;
 
-    margin:40px auto;
+    font-family:
+    "Microsoft YaHei",
+    Arial,
+    sans-serif;
 
-    background:white;
+    color:#333;
 
-    padding:50px;
-
-    border-radius:20px;
-
-    font-family:"Microsoft YaHei",sans-serif;
-    
     line-height:1.8;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-html{
-    background:#ffeef3;
-    scroll-behavior:smooth;
-}
-/* 主标题 */
-h1{
-    color:#b76e79;
-    font-size:64px;
-    margin:0;
+    background:#fffaf8;
+
 }
 
-/* 二级标题 */
+
+
 h2{
-    color:#6b4f4f;
-    font-size:38px;
-    font-weight:600;
-    border-left:6px solid #d8a7b1;
-    padding-left:15px;
-    margin-top:60px;
-    letter-spacing:2px;
+
+    text-align:center;
+
+    margin:50px 0 30px;
+
+    font-size:32px;
+
+    color:#8b5e52;
+
 }
 
-/* 普通文字 */
+
+
 p{
-    font-size:18px;
-    line-height:32px;
 
-    width:80%;
-    margin:20px auto;
-}
-ul{
-    width:80%;
-    margin:20px auto;
-}
-li{
-    margin:10px 0;
-    font-size:18px;
-}
-
-/* 分割线 */
-hr{
-    border:none;
-    height:1px;
-    background:#dddddd;
-    margin:30px 0;
-}
-
-/* 按钮区域 */
-.button-box{
     text-align:center;
-    margin:40px 0;
-}
-button{
-    background:linear-gradient(135deg,#ffb6c9,#d8899f);
-    color:white;
-    border:none;
-    padding:15px 38px;
-    border-radius:50px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    margin:0 10px;
-    transition:.35s;
-    box-shadow:0 8px 20px rgba(216,167,177,.45);
-    position:relative;
-    overflow:hidden;
-}
-button:hover{
-    transform:translateY(-6px);
-    background:linear-gradient(135deg,#ff8eb2,#b76e79);
-    box-shadow:0 15px 35px rgba(183,110,121,.55);
-}
-button:active{
-    transform:scale(.96);
-}
-button::before{
-    content:"";
-    position:absolute;
-    left:-120%;
-    top:0;
-    width:100%;
-    height:100%;
-    background:linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,.6),
-        transparent
-    );
-    transition:.7s;
-}
-button:hover::before{
-    left:120%;
-}
 
+    margin:15px auto;
 
-.banner{
-    text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(135deg,#ffeef3,#fff8fb);
-    border-radius:20px;
-    margin-bottom:40px;
-}
-.banner h1{
-    font-size:64px;
-    color:#b76e79;
-    margin-bottom:15px;
-}
-.banner-img{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-    border-radius:20px;
-    margin-bottom:30px;
-}
-
-.slogan{
-    font-size:36px;
-    color:#888;
-    margin-top:20px;
-    margin-bottom:30px;
-}
-
-
-/* ========================= */
-/* 手机端适配 */
-/* ========================= */
-
-@media (max-width:768px){
-
-    body{
-        margin:0;
-        padding:20px;
-        max-width:100%;
-        border-radius:0;
-    }
-
-    h1{
-        font-size:42px;
-    }
-
-    h2{
-        font-size:30px;
-    }
-
-    .slogan{
-        font-size:24px;
-        letter-spacing:2px;
-    }
-
-    p{
-        width:100%;
-        font-size:18px;
-        line-height:36px;
-        text-align:center;
-    }
-
-    ul{
-        width:85%;
-        margin:auto;
-    }
-
-    .button-box{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-    }
-
-    button{
-        width:260px;
-        padding:15px;
-        margin:auto;
-    }
-
-     .banner-img{
-        width:100%;
-        height:auto;
-    }
-
-    img{
-        max-width:100%;
-        height:auto;
-    }
-    .service-box{
-        grid-template-columns:1fr;
-    }
-     .card{
-        padding:25px;
-
-    }
-}
-/* ===================== */
-/* 服务项目卡片 */
-/* ===================== */
-
-.service-box{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:25px;
-
-    margin-top:35px;
+    max-width:900px;
 
 }
 
-.card{
+
+
+
+
+
+
+/* =====================
+   导航栏
+===================== */
+
+
+.navbar{
+
+
+    height:80px;
 
     background:white;
 
-    padding:30px;
+    display:flex;
 
-    border-radius:20px;
+    align-items:center;
 
-    text-align:center;
+    justify-content:space-between;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    padding:0 8%;
 
-    transition:.35s;
 
-}
+    position:fixed;
 
-.card:hover{
+    top:0;
 
-    transform:translateY(-10px);
-
-    box-shadow:0 18px 40px rgba(183,110,121,.25);
-
-}
-
-.icon{
-
-    font-size:48px;
-
-    margin-bottom:15px;
-
-}
-
-.card h3{
-
-    color:#b76e79;
-
-    margin-bottom:15px;
-
-}
-
-.card p{
+    left:0;
 
     width:100%;
 
-    margin:0;
+    z-index:1000;
+
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.logo{
+
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#b97b6d;
+
+
+}
+
+
+
+nav a{
+
+
+    text-decoration:none;
+
+    color:#555;
+
+    margin:0 20px;
 
     font-size:16px;
 
-    line-height:28px;
+
+    transition:.3s;
+
+
+}
+
+
+
+nav a:hover{
+
+
+    color:#c98c7b;
+
+
+}
+
+
+
+
+
+.nav-btn,
+.button-box button{
+
+
+    background:#c98c7b;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.nav-btn:hover,
+.button-box button:hover{
+
+
+    transform:translateY(-3px);
+
+    background:#ad6b5d;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+   Banner
+===================== */
+
+
+.banner{
+
+
+    margin-top:80px;
+
+    height:600px;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+.banner-img{
+
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+
+}
+
+
+
+.banner::after{
+
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+    rgba(0,0,0,0.25);
+
+
+}
+
+
+
+
+
+.banner-text{
+
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+
+    color:white;
+
+    text-align:center;
+
+    z-index:2;
+
+
+}
+
+
+
+.banner-text h1{
+
+
+    font-size:70px;
+
+    letter-spacing:10px;
+
+
+}
+
+
+
+.banner-text p{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+   首页按钮
+===================== */
+
+
+.button-box{
+
+
+    text-align:center;
+
+    margin:40px;
+
+
+}
+
+
+
+.button-box button{
+
+
+    margin:0 15px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+   服务卡片
+===================== */
+
+
+.service-box{
+
+
+    width:85%;
+
+    margin:auto;
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+.card{
+
+
+    background:white;
+
+
+    padding:35px 25px;
+
+
+    text-align:center;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-10px);
+
+
+}
+
+
+
+.icon{
+
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.card h3{
+
+
+    color:#a66c5d;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+   联系我们
+===================== */
+
+
+#contact p{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+   弹窗
+===================== */
+
+
+.modal{
+
+
+    display:none;
+
+
+    position:fixed;
+
+
+    top:0;
+
+    left:0;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+    rgba(0,0,0,0.5);
+
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    z-index:2000;
+
+
+}
+
+
+
+
+.modal-content{
+
+
+    background:white;
+
+
+    width:420px;
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+    position:relative;
+
+
+    animation:
+    showModal .3s;
+
+
+}
+
+
+
+
+@keyframes showModal{
+
+
+    from{
+
+
+        transform:scale(.7);
+
+        opacity:0;
+
+
+    }
+
+
+    to{
+
+
+        transform:scale(1);
+
+        opacity:1;
+
+
+    }
+
+
+}
+
+
+
+
+
+.modal-content h2{
+
+
+    margin:0 0 20px;
+
+
+}
+
+
+
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea{
+
+
+    width:100%;
+
+
+    padding:12px;
+
+
+    margin:10px 0;
+
+
+    border:1px solid #ddd;
+
+
+    border-radius:10px;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+.modal-content textarea{
+
+
+    height:100px;
+
+    resize:none;
+
+
+}
+
+
+
+
+.close{
+
+
+    position:absolute;
+
+
+    right:20px;
+
+
+    top:10px;
+
+
+    font-size:35px;
+
+
+    cursor:pointer;
+
+
+    color:#999;
+
+
+}
+
+
+
+.close:hover{
+
+
+    color:#333;
+
+
+}
+
+
+
+
+.submit-btn{
+
+
+    width:100%;
+
+
+    padding:14px;
+
+
+    margin-top:10px;
+
+
+    border:none;
+
+
+    background:#c98c7b;
+
+
+    color:white;
+
+
+    border-radius:30px;
+
+
+    cursor:pointer;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.submit-btn:hover{
+
+
+    background:#ad6b5d;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+   页脚
+===================== */
+
+
+footer{
+
+
+    margin-top:60px;
+
+
+    background:#333;
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    padding:25px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+   手机适配
+===================== */
+
+
+@media(max-width:768px){
+
+
+.navbar{
+
+
+    padding:0 20px;
+
+
+}
+
+
+
+nav{
+
+
+    display:none;
+
+
+}
+
+
+
+.banner{
+
+
+    height:400px;
+
+
+}
+
+
+
+.banner-text h1{
+
+
+    font-size:45px;
+
+
+}
+
+
+
+.service-box{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.modal-content{
+
+
+    width:90%;
+
+
+}
+
+
 
 }

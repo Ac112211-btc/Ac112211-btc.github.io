@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>御颜阁</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
-
   <div class="banner">
+    <img src="images/banner.jpg"
+         class="banner-img"
+         alt="御颜阁医美">
 
     <h1>御颜阁</h1>
-
     <p class="slogan">
         焕发您的自然之美
     </p>
+</div>
 
 <div class="button-box">
     <button>立即预约</button>
@@ -32,24 +36,57 @@
 
 <hr>
 
-<h2>我们的服务</h2>
+<h2 data-aos="fade-up">
+我们的服务
+</h2>
 
-<ul>
-    <li>光子嫩肤</li>
-    <li>M22光子嫩肤</li>
-    <li>热玛吉</li>
-    <li>超声炮</li>
-    <li>水光针</li>
-    <li>黄金微针</li>
-    <li>皮秒激光</li>
-    <li>激光脱毛</li>
-</ul>
+<div class="service-box" data-aos="fade-up">
+
+    <div class="card">
+        <div class="icon">✨</div>
+        <h3>光子嫩肤</h3>
+        <p>改善肤色暗沉，让肌肤更加透亮细腻。</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">💎</div>
+        <h3>M22光子嫩肤</h3>
+        <p>多模式嫩肤，淡化色斑、红血丝。</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🌸</div>
+        <h3>热玛吉</h3>
+        <p>紧致提升，改善松弛，让轮廓更加年轻。</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">💖</div>
+        <h3>超声炮</h3>
+        <p>深层抗衰，刺激胶原蛋白再生。</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">💧</div>
+        <h3>水光针</h3>
+        <p>深层补水，让肌肤更加水润透亮。</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🌟</div>
+        <h3>黄金微针</h3>
+        <p>改善痘坑、毛孔粗大，提升肤质。</p>
+    </div>
+
+</div>
 
 <hr>
 
-<h2>为什么选择我们</h2>
+<h2 data-aos="fade-right">
+为什么选择我们
+</h2>
 
-<ul>
+<ul data-aos="fade-left">
 
 <li>国家认证医师团队</li>
 
@@ -62,17 +99,38 @@
 </ul>
 <hr>
 
-<h2>联系我们</h2>
+<h2 data-aos="zoom-in">
+联系我们
+</h2>
 
-<p>📞 电话：+855 12 345 678</p>
+<p data-aos="fade-up">
+📞 电话：+855 ...
+</p>
 
-<p>📱 微信：Yuyange888</p>
+<p data-aos="fade-up">
+💬 WhatsApp：+855 ...
+</p>
 
-<p>📧 邮箱：jqing4455@gmail.com</p>
+<p data-aos="fade-up">
+📧 邮箱：...
+</p>
 
-<p>📍 地址：香港（西贡区坑口）</p>
+<p data-aos="fade-up">
+📍 地址：...
+</p>
 
-<p>🕒 营业时间：09:00 - 21:00</p>
+<p data-aos="fade-up">
+🕒 营业时间：09:00 - 21:00
+</p>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:900,
+    once:true,
+});
+</script>
 
 </body>
 </html>

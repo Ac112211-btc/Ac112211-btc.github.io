@@ -99,3 +99,61 @@ button:hover{
     margin-top:20px;
     margin-bottom:30px;
 }
+
+
+/* ========================= */
+/* 手机端适配 */
+/* ========================= */
+
+@media (max-width:768px){
+
+    body{
+        margin:0;
+        padding:20px;
+        max-width:100%;
+        border-radius:0;
+    }
+
+    h1{
+        font-size:42px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    .slogan{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+
+    p{
+        width:100%;
+        font-size:18px;
+        line-height:36px;
+        text-align:center;
+    }
+
+    ul{
+        width:85%;
+        margin:auto;
+    }
+
+    .button-box{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    button{
+        width:260px;
+        padding:15px;
+        margin:auto;
+    }
+
+    img{
+        max-width:100%;
+        height:auto;
+    }
+
+}

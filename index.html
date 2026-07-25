@@ -2,476 +2,188 @@
 <html lang="zh-CN">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>御颜阁</title>
-
-
 <link rel="stylesheet" href="style.css">
-
-
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
-
 </head>
-
-
 
 <body>
 
-
 <!-- 导航栏 -->
-
 <header class="navbar">
-
-
 <div class="logo">
 🌸 御颜阁
 </div>
 
-
-
 <nav>
-
 <a href="#home">首页</a>
-
 <a href="#service">服务项目</a>
-
 <a href="#about">关于我们</a>
-
 <a href="#contact">联系我们</a>
-
-
 </nav>
 
-
-
 <button class="nav-btn" id="openModal">
-
 立即预约
-
 </button>
-
-
 </header>
 
-
-
-
-
 <!-- 首页Banner -->
-
-
 <section class="banner" id="home">
-
-
 <img 
 id="banner"
 src="images/banner1.jpg"
 class="banner-img"
 alt="御颜阁医美"
 >
-
-
-
 <div class="banner-text">
-
-
 <h1>
 御颜阁
 </h1>
-
-
 <p>
 焕发您的自然之美
 </p>
-
-
 </div>
-
-
 </section>
-
-
-
-
 
 <!-- 首页按钮 -->
-
-
 <div class="button-box">
-
-
 <button id="bookBtn">
-
 立即预约
-
 </button>
-
-
-
 <button id="chatBtn">
-
 在线咨询
-
 </button>
-
-
 </div>
 
-
-
-
-
-
-
 <!-- 关于我们 -->
-
-
 <section id="about">
-
-
 <h2 data-aos="fade-up">
-
 专业医美 · 科技护肤 · 安全塑美
-
 </h2>
-
-
-
 <p>
-
 欢迎来到御颜阁，我们致力于提供专业、安全、舒适的美容护理服务。
-
 </p>
-
-
 <p>
-
 您的美丽，是我们的追求。
-
 </p>
-
-
 </section>
-
-
-
-
-
-
-
 <hr>
 
-
-
-
-
-
 <!-- 服务项目 -->
-
-
 <section id="service">
-
-
 <h2 data-aos="fade-up">
-
 我们的服务
-
 </h2>
-
-
-
 <div class="service-box">
-
-
-
 <div class="card">
-
 <div class="icon">✨</div>
-
 <h3>光子嫩肤</h3>
-
 <p>
 改善肤色暗沉，让肌肤更加透亮细腻。
 </p>
-
 </div>
-
-
-
-
 <div class="card">
-
 <div class="icon">💎</div>
-
 <h3>M22光子嫩肤</h3>
-
 <p>
 多模式嫩肤，淡化色斑、红血丝。
 </p>
-
 </div>
-
-
-
-
 <div class="card">
-
 <div class="icon">🌸</div>
-
 <h3>热玛吉</h3>
-
 <p>
 紧致提升，改善松弛。
 </p>
-
 </div>
-
-
-
-
 <div class="card">
-
 <div class="icon">💖</div>
-
 <h3>超声炮</h3>
-
 <p>
 深层抗衰，刺激胶原蛋白。
 </p>
-
 </div>
-
-
-
-
 <div class="card">
-
 <div class="icon">💧</div>
-
 <h3>水光针</h3>
-
 <p>
 深层补水，让肌肤水润。
 </p>
-
 </div>
-
-
-
-
 <div class="card">
-
 <div class="icon">🌟</div>
-
 <h3>黄金微针</h3>
-
 <p>
 改善毛孔、痘坑问题。
 </p>
-
 </div>
-
-
-
 </div>
-
-
 </section>
-
-
-
-
-
-
 <hr>
 
-
-
-
-
 <!-- 联系我们 -->
-
-
 <section id="contact">
-
-
 <h2>
-
 联系我们
-
 </h2>
-
-
 <p>
 📞 电话：+855 xxxx
 </p>
-
-
 <p>
 💬 WhatsApp：+855 xxxx
 </p>
-
-
 <p>
 📍 地址：待填写
 </p>
-
-
 <p>
 🕒 营业时间：09:00 - 21:00
 </p>
-
-
 </section>
 
-
-
-
-
-
-
 <!-- 预约弹窗 -->
-
-
 <div class="modal" id="bookingModal">
-
-
-
 <div class="modal-content">
-
-
-
 <span class="close" id="closeModal">
-
 ×
-
 </span>
 
-
-
-
 <h2>
-
 在线预约
-
 </h2>
-
-
-
-
-<input type="text" placeholder="请输入姓名">
-
-
-
-<input type="tel" placeholder="请输入电话">
-
-
-
-
-<select>
-
-
-<option>
-请选择项目
-</option>
-
-
-<option>
-光子嫩肤
-</option>
-
-
-<option>
-M22光子嫩肤
-</option>
-
-
-<option>
-热玛吉
-</option>
-
-
-<option>
-超声炮
-</option>
-
-
-<option>
-水光针
-</option>
-
-
+<input id="name" type="text" placeholder="请输入姓名">
+<input id="phone" type="tel" placeholder="请输入电话">
+<select id="service">
+    <option value="">请选择项目</option>
+    <option>光子嫩肤</option>
+    <option>M22光子嫩肤</option>
+    <option>热玛吉</option>
+    <option>超声炮</option>
+    <option>水光针</option>
 </select>
 
+<textarea id="message" placeholder="请输入需求"></textarea>
 
-
-
-<textarea placeholder="请输入需求">
-
-</textarea>
-
-
-
-
-
-<button class="submit-btn">
-
-提交预约
-
+<button class="submit-btn" id="submitBooking">
+    提交预约
 </button>
-
-
-
-
 </div>
-
-
 </div>
-
-
-
-
-
-
 
 <footer>
-
 © 2026 御颜阁 版权所有
-
 </footer>
 
-
-
-
-
-
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-
 <script>
-
 AOS.init({
-
 duration:900,
-
 once:true
-
 });
 
-
 </script>
-
-
-
 <script src="script.js"></script>
-
-
-
 </body>
 
 </html>

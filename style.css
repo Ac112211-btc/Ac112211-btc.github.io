@@ -1,351 +1,880 @@
-/* =====================
-   全局基础设置
-===================== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================
+   基础设置
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
     font-family:
-    "Microsoft YaHei",
-    Arial,
-    sans-serif;
-    color:#333;
-    line-height:1.8;
-    background:#fffaf8;
+        "Microsoft YaHei",
+        "PingFang SC",
+        Arial,
+        sans-serif;
+
+    color: #555;
+
+    background: #fff4f7;
+
+    overflow-x: hidden;
 }
 
-h2{
-    text-align:center;
-    margin:50px 0 30px;
-    font-size:32px;
-    color:#8b5e52;
-}
 
-p{
-    text-align:center;
-    margin:15px auto;
-    max-width:900px;
-}
-
-/* =====================
+/* =========================
    导航栏
-===================== */
-.navbar{
-    height:80px;
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 8%;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
+========================= */
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#b97b6d;
-}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-nav a{
-    text-decoration:none;
-    color:#555;
-    margin:0 20px;
-    font-size:16px;
-    transition:.3s;
-}
+    width: 100%;
 
-nav a:hover{
-    color:#c98c7b;
-}
+    display: flex;
+    align-items: center;
 
-.nav-btn,
-.button-box button{
-    background:#c98c7b;
-    color:white;
-    border:none;
-    padding:12px 28px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:16px;
-    transition:.3s;
-}
+    padding: 15px 7%;
 
-.nav-btn:hover,
-.button-box button:hover{
-    transform:translateY(-3px);
-    background:#ad6b5d;
-}
+    background: rgba(255, 255, 255, 0.96);
 
-/* =====================
-   Banner
-===================== */
-.banner{
-    margin-top:80px;
-    height:600px;
-    position:relative;
-    overflow:hidden;
-}
-
-.banner-img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.banner::after{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:
-    rgba(0,0,0,0.25);
-}
-
-.banner-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:
-    translate(-50%,-50%);
-    color:white;
-    text-align:center;
-    z-index:2;
-}
-
-.banner-text h1{
-    font-size:70px;
-    letter-spacing:10px;
-}
-
-.banner-text p{
-    font-size:28px;
-}
-
-/* =====================
-   首页按钮
-===================== */
-.button-box{
-    text-align:center;
-    margin:40px;
-}
-
-.button-box button{
-    margin:0 15px;
-}
-
-/* =====================
-   服务卡片
-===================== */
-.service-box{
-    width:85%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:
-    repeat(3,1fr);
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:35px 25px;
-    text-align:center;
-    border-radius:20px;
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
-    transition:.3s;
+        0 3px 15px rgba(0, 0, 0, 0.08);
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.logo {
+    text-decoration: none;
+
+    color: #b76e79;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    white-space: nowrap;
 }
 
-.icon{
-    font-size:45px;
-    margin-bottom:15px;
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    flex: 1;
 }
 
-.card h3{
-    color:#a66c5d;
-    margin-bottom:10px;
+.nav-menu a {
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 16px;
+
+    transition: 0.3s;
 }
 
-/* =====================
-   联系我们
-===================== */
-#contact p{
-    font-size:18px;
+.nav-menu a:hover {
+    color: #d98ca1;
 }
 
-/* =====================
-   弹窗
-===================== */
-.modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+.nav-btn {
+    border: none;
+
     background:
-    rgba(0,0,0,0.5);
-    justify-content:center;
-    align-items:center;
-    z-index:2000;
+        linear-gradient(
+            135deg,
+            #e99ab3,
+            #c9788f
+        );
+
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(201, 120, 143, 0.25);
+
+    transition: 0.3s;
 }
 
-.modal-content{
-    background:white;
-    width:420px;
-    padding:35px;
-    border-radius:25px;
-    position:relative;
-    animation:
-    showModal .3s;
+.nav-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(201, 120, 143, 0.4);
 }
 
-@keyframes showModal{
 
-    from{
+/* =========================
+   Banner
+========================= */
 
-        transform:scale(.7);
-        opacity:0;
+.banner {
+    position: relative;
 
-    }
+    width: 100%;
 
-    to{
+    height: 620px;
 
-        transform:scale(1);
-        opacity:1;
+    overflow: hidden;
 
-    }
-
+    background: #ddd;
 }
 
-.modal-content h2{
+.banner-img {
+    width: 100%;
+    height: 100%;
 
-    margin:0 0 20px;
+    object-fit: cover;
 
+    object-position: center;
+
+    display: block;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.banner-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.02)
+        );
+}
+
+.banner-text {
+    position: absolute;
+
+    left: 8%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.35);
+}
+
+.banner-text h1 {
+    margin: 0 0 15px;
+
+    font-size: 72px;
+
+    font-weight: bold;
+}
+
+.banner-text p {
+    margin: 0 0 15px;
+
+    font-size: 30px;
+}
+
+.banner-text span {
+    font-size: 18px;
+}
+
+
+/* =========================
+   首页按钮
+========================= */
+
+.button-box {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 45px 20px;
+}
+
+.main-btn {
+    border: none;
+
+    min-width: 180px;
+
+    padding: 15px 30px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eb9ab4,
+            #c97891
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(201, 120, 143, 0.25);
+}
+
+.main-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(201, 120, 143, 0.45);
+}
+
+.secondary-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #dca4b5,
+            #b76e79
+        );
+}
+
+
+/* =========================
+   内容区域
+========================= */
+
+.content-section {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 60px 0;
+}
+
+h2 {
+    color: #6b4f55;
+
+    font-size: 38px;
+
+    margin:
+        0 0 35px;
+
+    padding-left: 18px;
+
+    border-left:
+        5px solid #d8a7b1;
+}
+
+p {
+    font-size: 17px;
+
+    line-height: 2;
+
+    color: #555;
+}
+
+.highlight-text {
+    color: #b76e79;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+
+.section-intro {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+hr {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    border: none;
+
+    border-top:
+        1px solid #eadde1;
+}
+
+
+/* =========================
+   服务卡片
+========================= */
+
+.service-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(183, 110, 121, 0.18);
+}
+
+.icon {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #b76e79;
+
+    font-size: 22px;
+
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* =========================
+   为什么选择我们
+========================= */
+
+.choose-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.choose-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: white;
+
+    padding: 20px 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.choose-item span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #e6a0b4;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.choose-item p {
+    margin: 0;
+}
+
+
+/* =========================
+   治疗案例
+========================= */
+
+.case-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.case-card {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.case-images {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.case-image-box {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+.case-image-box img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.case-image-box span {
+    position: absolute;
+
+    left: 10px;
+    bottom: 10px;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+}
+
+.case-card h3 {
+    color: #b76e79;
+
+    margin-top: 20px;
+
+    font-size: 22px;
+}
+
+.case-card p {
+    font-size: 15px;
+}
+
+
+/* =========================
+   联系我们
+========================= */
+
+.contact-list {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.contact-list p {
+    background: white;
+
+    padding: 18px 25px;
+
+    margin: 12px 0;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-list strong {
+    color: #6b4f55;
+}
+
+
+/* =========================
+   预约弹窗
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 40px 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-tip {
+    font-size: 14px;
+
+    color: #888;
+}
+
+.close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 32px;
+
+    color: #999;
+
+    cursor: pointer;
 }
 
 .modal-content input,
 .modal-content select,
-.modal-content textarea{
+.modal-content textarea {
+    width: 100%;
 
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ddd;
-    border-radius:10px;
-    font-size:15px;
+    padding: 14px 16px;
 
+    margin-bottom: 15px;
+
+    border:
+        1px solid #ead5db;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    outline: none;
 }
 
-.modal-content textarea{
-
-    height:100px;
-    resize:none;
-
+.modal-content input:focus,
+.modal-content select:focus,
+.modal-content textarea:focus {
+    border-color: #d98ca1;
 }
 
-.close{
+.modal-content textarea {
+    height: 120px;
 
-    position:absolute;
-    right:20px;
-    top:10px;
-    font-size:35px;
-    cursor:pointer;
-    color:#999;
-
+    resize: vertical;
 }
 
-.close:hover{
+.submit-btn {
+    width: 100%;
 
-    color:#333;
+    border: none;
 
+    padding: 15px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e99ab3,
+            #c9788f
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
 }
 
-.submit-btn{
 
-    width:100%;
-    padding:14px;
-    margin-top:10px;
-    border:none;
-    background:#c98c7b;
-    color:white;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:16px;
-
-}
-
-.submit-btn:hover{
-
-    background:#ad6b5d;
-
-}
-
-/* =====================
+/* =========================
    页脚
-===================== */
-footer{
+========================= */
 
-    margin-top:60px;
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:25px;
+footer {
+    text-align: center;
 
+    padding: 30px 20px;
+
+    background: #6b4f55;
+
+    color: white;
 }
 
-/* =====================
-   手机适配
-===================== */
-@media(max-width:768px){
+footer p {
+    color: white;
 
-.navbar{
+    margin: 0;
 
-    padding:0 20px;
-
+    font-size: 14px;
 }
 
-nav{
 
-    display:none;
+/* =========================
+   手机端
+========================= */
 
-}
+@media (max-width: 768px) {
 
-.banner{
+    .navbar {
+        padding: 12px 15px;
 
-    height:400px;
+        flex-wrap: wrap;
 
-}
+        gap: 10px;
+    }
 
-.banner-text h1{
+    .logo {
+        font-size: 22px;
+    }
 
-    font-size:45px;
+    .nav-menu {
+        order: 3;
 
-}
+        width: 100%;
 
-.service-box{
+        overflow-x: auto;
 
-    grid-template-columns:1fr;
+        justify-content: flex-start;
 
-}
+        gap: 22px;
 
-.modal-content{
+        padding: 5px 0;
 
-    width:90%;
+        scrollbar-width: none;
+    }
 
-}
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+
+        white-space: nowrap;
+    }
+
+    .nav-btn {
+        margin-left: auto;
+
+        padding: 9px 18px;
+
+        font-size: 14px;
+    }
+
+
+    /* 手机 Banner */
+
+    .banner {
+        height: 430px;
+    }
+
+    .banner-img {
+        object-position: center center;
+    }
+
+    .banner-text {
+        left: 0;
+        right: 0;
+
+        top: 50%;
+
+        transform:
+            translateY(-50%);
+
+        text-align: center;
+
+        padding: 20px;
+    }
+
+    .banner-text h1 {
+        font-size: 48px;
+    }
+
+    .banner-text p {
+        font-size: 22px;
+    }
+
+    .banner-text span {
+        font-size: 14px;
+    }
+
+
+    /* 首页按钮 */
+
+    .button-box {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 30px 20px;
+    }
+
+    .main-btn {
+        width: 220px;
+
+        min-width: 0;
+    }
+
+
+    /* 内容 */
+
+    .content-section {
+        width: 90%;
+
+        padding: 45px 0;
+    }
+
+    h2 {
+        font-size: 30px;
+
+        padding-left: 12px;
+
+        border-left-width: 4px;
+    }
+
+    p {
+        font-size: 16px;
+
+        line-height: 1.9;
+    }
+
+
+    /* 服务卡片 */
+
+    .service-box {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .card {
+        padding: 28px 22px;
+    }
+
+
+    /* 选择我们 */
+
+    .choose-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* 案例 */
+
+    .case-box {
+        grid-template-columns: 1fr;
+    }
+
+    .case-images {
+        grid-template-columns: 1fr;
+    }
+
+    .case-image-box img {
+        height: 250px;
+    }
+
+
+    /* 联系 */
+
+    .contact-list p {
+        padding: 15px;
+    }
+
+
+    /* 弹窗 */
+
+    .modal-content {
+        padding: 35px 20px;
+    }
 
 }

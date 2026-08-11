@@ -2,188 +2,664 @@
 <html lang="zh-CN">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>御颜阁</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>御颜阁｜专业医美 · 科技护肤 · 安全塑美</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS 动画 -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
 </head>
 
 <body>
 
-<!-- 导航栏 -->
-<header class="navbar">
-<div class="logo">
-🌸 御颜阁
-</div>
+    <!-- ========================= -->
+    <!-- 导航栏 -->
+    <!-- ========================= -->
 
-<nav>
-<a href="#home">首页</a>
-<a href="#service">服务项目</a>
-<a href="#about">关于我们</a>
-<a href="#contact">联系我们</a>
-</nav>
+    <header class="navbar">
 
-<button class="nav-btn" id="openModal">
-立即预约
-</button>
-</header>
+        <a href="#home" class="logo">
+            🌸 御颜阁
+        </a>
 
-<!-- 首页Banner -->
-<section class="banner" id="home">
-<img 
-id="banner"
-src="images/banner1.jpg"
-class="banner-img"
-alt="御颜阁医美"
->
-<div class="banner-text">
-<h1>
-御颜阁
-</h1>
-<p>
-焕发您的自然之美
-</p>
-</div>
-</section>
+        <nav class="nav-menu">
 
-<!-- 首页按钮 -->
-<div class="button-box">
-<button id="bookBtn">
-立即预约
-</button>
-<button id="chatBtn">
-在线咨询
-</button>
-</div>
+            <a href="#home">首页</a>
 
-<!-- 关于我们 -->
-<section id="about">
-<h2 data-aos="fade-up">
-专业医美 · 科技护肤 · 安全塑美
-</h2>
-<p>
-欢迎来到御颜阁，我们致力于提供专业、安全、舒适的美容护理服务。
-</p>
-<p>
-您的美丽，是我们的追求。
-</p>
-</section>
-<hr>
+            <a href="#service">服务项目</a>
 
-<!-- 服务项目 -->
-<section id="service">
-<h2 data-aos="fade-up">
-我们的服务
-</h2>
-<div class="service-box">
-<div class="card">
-<div class="icon">✨</div>
-<h3>光子嫩肤</h3>
-<p>
-改善肤色暗沉，让肌肤更加透亮细腻。
-</p>
-</div>
-<div class="card">
-<div class="icon">💎</div>
-<h3>M22光子嫩肤</h3>
-<p>
-多模式嫩肤，淡化色斑、红血丝。
-</p>
-</div>
-<div class="card">
-<div class="icon">🌸</div>
-<h3>热玛吉</h3>
-<p>
-紧致提升，改善松弛。
-</p>
-</div>
-<div class="card">
-<div class="icon">💖</div>
-<h3>超声炮</h3>
-<p>
-深层抗衰，刺激胶原蛋白。
-</p>
-</div>
-<div class="card">
-<div class="icon">💧</div>
-<h3>水光针</h3>
-<p>
-深层补水，让肌肤水润。
-</p>
-</div>
-<div class="card">
-<div class="icon">🌟</div>
-<h3>黄金微针</h3>
-<p>
-改善毛孔、痘坑问题。
-</p>
-</div>
-</div>
-</section>
-<hr>
+            <a href="#about">关于我们</a>
 
-<!-- 联系我们 -->
-<section id="contact">
-<h2>
-联系我们
-</h2>
-<p>
-📞 电话：+855 xxxx
-</p>
-<p>
-💬 WhatsApp：+855 xxxx
-</p>
-<p>
-📍 地址：待填写
-</p>
-<p>
-🕒 营业时间：09:00 - 21:00
-</p>
-</section>
+            <a href="#cases">治疗案例</a>
 
-<!-- 预约弹窗 -->
-<div class="modal" id="bookingModal">
-<div class="modal-content">
-<span class="close" id="closeModal">
-×
-</span>
+            <a href="#contact">联系我们</a>
 
-<h2>
-在线预约
-</h2>
-<input id="name" type="text" placeholder="请输入姓名">
-<input id="phone" type="tel" placeholder="请输入电话">
-<select id="service">
-    <option value="">请选择项目</option>
-    <option>光子嫩肤</option>
-    <option>M22光子嫩肤</option>
-    <option>热玛吉</option>
-    <option>超声炮</option>
-    <option>水光针</option>
-</select>
+        </nav>
 
-<textarea id="message" placeholder="请输入需求"></textarea>
+        <button
+            class="nav-btn"
+            id="openModal"
+            type="button"
+        >
+            立即预约
+        </button>
 
-<button class="submit-btn" id="submitBooking">
-    提交预约
-</button>
-</div>
-</div>
+    </header>
 
-<footer>
-© 2026 御颜阁 版权所有
-</footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({
-duration:900,
-once:true
-});
+    <!-- ========================= -->
+    <!-- 首页 Banner -->
+    <!-- ========================= -->
 
-</script>
-<script src="script.js"></script>
+    <main>
+
+        <section
+            class="banner"
+            id="home"
+        >
+
+            <img
+                id="banner"
+                src="images/banner1.jpg"
+                class="banner-img"
+                alt="御颜阁医美"
+            >
+
+            <div class="banner-overlay"></div>
+
+            <div class="banner-text">
+
+                <h1>御颜阁</h1>
+
+                <p>
+                    焕发您的自然之美
+                </p>
+
+                <span>
+                    专业医美 · 科技护肤 · 安全塑美
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- 首页按钮 -->
+        <!-- ========================= -->
+
+        <div
+            class="button-box"
+            data-aos="fade-up"
+        >
+
+            <button
+                class="main-btn"
+                id="bookBtn"
+                type="button"
+            >
+                立即预约
+            </button>
+
+            <button
+                class="main-btn secondary-btn"
+                id="chatBtn"
+                type="button"
+            >
+                在线咨询
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- 关于我们 -->
+        <!-- ========================= -->
+
+        <section
+            class="content-section about-section"
+            id="about"
+        >
+
+            <h2 data-aos="fade-up">
+                专业医美 · 科技护肤 · 安全塑美
+            </h2>
+
+            <p data-aos="fade-up">
+                欢迎来到御颜阁，我们致力于提供专业、安全、舒适的美容护理服务。
+            </p>
+
+            <p data-aos="fade-up">
+                从肌肤管理到年轻化护理，我们关注每一处细节，
+                希望为每一位顾客带来更加自然、自信的美。
+            </p>
+
+            <p
+                class="highlight-text"
+                data-aos="fade-up"
+            >
+                您的美丽，是我们的追求。
+            </p>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ========================= -->
+        <!-- 服务项目 -->
+        <!-- ========================= -->
+
+        <section
+            class="content-section"
+            id="service"
+        >
+
+            <h2 data-aos="fade-up">
+                我们的服务
+            </h2>
+
+            <p
+                class="section-intro"
+                data-aos="fade-up"
+            >
+                根据不同肌肤需求，提供针对性的护理方案。
+            </p>
+
+
+            <div class="service-box">
+
+                <!-- 服务 1 -->
+
+                <div
+                    class="card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="icon">
+                        ✨
+                    </div>
+
+                    <h3>
+                        光子嫩肤
+                    </h3>
+
+                    <p>
+                        改善肤色暗沉，让肌肤更加透亮细腻。
+                    </p>
+
+                </div>
+
+
+                <!-- 服务 2 -->
+
+                <div
+                    class="card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="icon">
+                        💎
+                    </div>
+
+                    <h3>
+                        M22光子嫩肤
+                    </h3>
+
+                    <p>
+                        多模式护理，针对肤色、色斑等肌肤问题进行改善。
+                    </p>
+
+                </div>
+
+
+                <!-- 服务 3 -->
+
+                <div
+                    class="card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="icon">
+                        🌸
+                    </div>
+
+                    <h3>
+                        热玛吉
+                    </h3>
+
+                    <p>
+                        紧致提升，改善肌肤松弛，让面部轮廓更加自然。
+                    </p>
+
+                </div>
+
+
+                <!-- 服务 4 -->
+
+                <div
+                    class="card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="icon">
+                        💖
+                    </div>
+
+                    <h3>
+                        超声炮
+                    </h3>
+
+                    <p>
+                        针对肌肤紧致与轮廓管理，帮助改善肌肤状态。
+                    </p>
+
+                </div>
+
+
+                <!-- 服务 5 -->
+
+                <div
+                    class="card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="icon">
+                        💧
+                    </div>
+
+                    <h3>
+                        水光针
+                    </h3>
+
+                    <p>
+                        补充肌肤水分，让肌肤看起来更加水润透亮。
+                    </p>
+
+                </div>
+
+
+                <!-- 服务 6 -->
+
+                <div
+                    class="card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="icon">
+                        🌟
+                    </div>
+
+                    <h3>
+                        黄金微针
+                    </h3>
+
+                    <p>
+                        针对毛孔、痘坑等肌肤问题进行改善与管理。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ========================= -->
+        <!-- 为什么选择我们 -->
+        <!-- ========================= -->
+
+        <section
+            class="content-section choose-section"
+        >
+
+            <h2 data-aos="fade-right">
+                为什么选择我们
+            </h2>
+
+            <div
+                class="choose-grid"
+                data-aos="fade-up"
+            >
+
+                <div class="choose-item">
+                    <span>✓</span>
+                    <p>专业团队</p>
+                </div>
+
+                <div class="choose-item">
+                    <span>✓</span>
+                    <p>专业设备</p>
+                </div>
+
+                <div class="choose-item">
+                    <span>✓</span>
+                    <p>个性化护理方案</p>
+                </div>
+
+                <div class="choose-item">
+                    <span>✓</span>
+                    <p>舒适、安全环境</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ========================= -->
+        <!-- 治疗案例 -->
+        <!-- ========================= -->
+
+        <section
+            class="content-section cases-section"
+            id="cases"
+        >
+
+            <h2 data-aos="fade-up">
+                治疗案例
+            </h2>
+
+            <p
+                class="section-intro"
+                data-aos="fade-up"
+            >
+                真实案例展示，更多案例可持续更新。
+            </p>
+
+
+            <div class="case-box">
+
+
+                <!-- 案例 1 -->
+
+                <div
+                    class="case-card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="case-images">
+
+                        <div class="case-image-box">
+
+                            <img
+                                src="images/banner1.jpg"
+                                alt="治疗案例展示"
+                            >
+
+                            <span>
+                                案例展示
+                            </span>
+
+                        </div>
+
+                        <div class="case-image-box">
+
+                            <img
+                                src="images/banner2.jpg"
+                                alt="治疗案例展示"
+                            >
+
+                            <span>
+                                效果展示
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        肌肤管理案例
+                    </h3>
+
+                    <p>
+                        针对不同肌肤状态制定个性化护理方案。
+                    </p>
+
+                </div>
+
+
+                <!-- 案例 2 -->
+
+                <div
+                    class="case-card"
+                    data-aos="fade-up"
+                >
+
+                    <div class="case-images">
+
+                        <div class="case-image-box">
+
+                            <img
+                                src="images/banner2.jpg"
+                                alt="医美案例展示"
+                            >
+
+                            <span>
+                                案例展示
+                            </span>
+
+                        </div>
+
+                        <div class="case-image-box">
+
+                            <img
+                                src="images/banner3.jpg"
+                                alt="医美案例展示"
+                            >
+
+                            <span>
+                                环境展示
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        专业护理案例
+                    </h3>
+
+                    <p>
+                        结合专业设备与护理方案，帮助改善肌肤状态。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ========================= -->
+        <!-- 联系我们 -->
+        <!-- ========================= -->
+
+        <section
+            class="content-section contact-section"
+            id="contact"
+        >
+
+            <h2 data-aos="zoom-in">
+                联系我们
+            </h2>
+
+
+            <div class="contact-list">
+
+                <p data-aos="fade-up">
+                    📞
+                    <strong>电话：</strong>
+                    +852 9889 5174
+                </p>
+
+                <p data-aos="fade-up">
+                    💬
+                    <strong>WhatsApp：</strong>
+                    +852 9889 5174
+                </p>
+
+                <p data-aos="fade-up">
+                    📍
+                    <strong>地址：</strong>
+                    香港——西贡区坑口
+                </p>
+
+                <p data-aos="fade-up">
+                    🕒
+                    <strong>营业时间：</strong>
+                    09:00 - 21:00
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- 预约弹窗 -->
+    <!-- ========================= -->
+
+    <div
+        class="modal"
+        id="bookingModal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close"
+                id="closeModal"
+                type="button"
+                aria-label="关闭"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                在线预约
+            </h2>
+
+            <p class="modal-tip">
+                请填写您的联系方式，我们会尽快与您联系。
+            </p>
+
+
+            <input
+                id="name"
+                type="text"
+                placeholder="请输入姓名"
+            >
+
+
+            <input
+                id="phone"
+                type="tel"
+                placeholder="请输入电话"
+            >
+
+
+            <!-- 注意：这里不能再叫 service -->
+            <select id="bookingService">
+
+                <option value="">
+                    请选择项目
+                </option>
+
+                <option value="光子嫩肤">
+                    光子嫩肤
+                </option>
+
+                <option value="M22光子嫩肤">
+                    M22光子嫩肤
+                </option>
+
+                <option value="热玛吉">
+                    热玛吉
+                </option>
+
+                <option value="超声炮">
+                    超声炮
+                </option>
+
+                <option value="水光针">
+                    水光针
+                </option>
+
+                <option value="黄金微针">
+                    黄金微针
+                </option>
+
+            </select>
+
+
+            <textarea
+                id="message"
+                placeholder="请输入您的需求"
+            ></textarea>
+
+
+            <button
+                class="submit-btn"
+                id="submitBooking"
+                type="button"
+            >
+                提交预约
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- 页脚 -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 御颜阁 版权所有
+        </p>
+
+    </footer>
+
+
+    <!-- ========================= -->
+    <!-- AOS -->
+    <!-- ========================= -->
+
+    <script
+        src="https://unpkg.com/aos@2.3.4/dist/aos.js">
+    </script>
+
+
+    <!-- ========================= -->
+    <!-- 自己的 JS -->
+    <!-- ========================= -->
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
